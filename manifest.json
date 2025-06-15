@@ -1,11 +1,12 @@
 {
   "name": "Palmistry App",
   "short_name": "Palmistry",
-  "description": "Scan your palm and discover your destiny!",
-  "start_url": "index.html",
+  "id": "/",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#87ceeb",
+  "background_color": "#d2b48c",
   "theme_color": "#5c4033",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "icon-192.png",
@@ -17,5 +18,16 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "512x1024",
+      "type": "image/png",
+      "label": "Palmistry Home Page"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
 }
