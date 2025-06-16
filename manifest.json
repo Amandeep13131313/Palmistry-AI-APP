@@ -1,28 +1,20 @@
 {
-  "name": "Sample PWA App",
-  "short_name": "PWA App",
+  "name": "My Progressive Web App",
+  "short_name": "MyPWA",
+  "id": "/index.html",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "theme_color": "#317EFB",
   "orientation": "portrait",
-  "id": "/",
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
   "icons": [
     {
-      "src": "icon-512x512.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
-  ],
-  "launch_handler": {
-    "client_mode": "auto"
-  },
-  "scope": "/",
-  "scope_extensions": [
-    {
-      "origin": "/"
-    }
-  ],
-  "prefer_related_applications": false
-}
+  ]
