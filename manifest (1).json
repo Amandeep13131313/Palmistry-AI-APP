@@ -1,0 +1,21 @@
+{
+  "name": "Palmistry AI App",
+  "short_name": "Palmistry",
+  "id": "/Palmistry-AI-APP/",
+  "start_url": "/Palmistry-AI-APP/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#5c4033",
+  "orientation": "portrait",
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
