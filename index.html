@@ -1,13 +1,91 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="manifest.json">
-    <title>PWA App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palmistry App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: skyblue;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: #d2b48c; /* light brown */
+      border-radius: 20px;
+      padding: 30px 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #5c4033; /* dark brown */
+      color: #fff;
+    }
+    #uploadInput {
+      display: none;
+    }
+    .output {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #333;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to PWA App</h1>
+  <div class="container">
+    <h1 style="color: #5c4033;">Palmistry App</h1>
+    <input type="file" id="uploadInput" accept="image/*">
+    <button class="btn btn-scan" onclick="document.getElementById('uploadInput').click()">SCAN YOUR PALM</button>
+    <button class="btn btn-read" onclick="simulateReading()">PALM READING<br><small>Reveal what your palm says</small></button>
+    <button class="btn btn-daily" onclick="showDailyInsights()">DAILY INSIGHTS<br><small>Get your horoscope for today</small></button>
+    <div class="output" id="readingOutput"></div>
+  </div>
+
+  <script>
+    function simulateReading() {
+      const output = document.getElementById('readingOutput');
+      const readings = [
+        "You have a strong heart line — you are emotional and intuitive.",
+        "Your life line shows vitality and a love for adventure.",
+        "You have a deep head line — a sign of intelligence and strong focus.",
+        "The fate line on your palm indicates a major shift is coming soon.",
+        "Your palm suggests success in communication and teaching roles."
+      ];
+      const randomReading = readings[Math.floor(Math.random() * readings.length)];
+      output.innerText = randomReading;
+      output.style.display = 'block';
+    }
+
+    function showDailyInsights() {
+      const output = document.getElementById('readingOutput');
+      const insights = [
+        "Today is a good day to focus on your personal growth.",
+        "Unexpected news may bring a positive shift in your life.",
+        "You might reconnect with someone important today.",
+        "Take time to relax — your mind needs it.",
+        "A financial opportunity could be coming your way."
+      ];
+      const dailyMessage = insights[Math.floor(Math.random() * insights.length)];
+      output.innerText = dailyMessage;
+      output.style.display = 'block';
+    }
+  </script>
 </body>
 </html>
