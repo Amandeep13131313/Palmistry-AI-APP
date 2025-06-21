@@ -1,21 +1,41 @@
 {
   "name": "Palmistry AI App",
-  "short_name": "Palmistry",
-  "id": "/Palmistry-AI-APP/",
-  "start_url": "/Palmistry-AI-APP/index.html",
+  "short_name": "PalmistryAI",
+  "id": "/",
+  "start_url": "/Palmistry-AI-APP/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#5c4033",
   "theme_color": "#5c4033",
   "orientation": "portrait",
-  "launch_handler": {
-    "client_mode": "navigate-existing"
-  },
+  "description": "Scan your palm and discover insights into your future with AI-powered palmistry.",
+  "lang": "en",
+  "dir": "ltr",
   "icons": [
     {
       "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
-  ]
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot.png",
+      "sizes": "800x600",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["lifestyle", "health", "astrology"],
+  "iarc_rating_id": "PalmistryAI_001",
+  "scope": "/Palmistry-AI-APP/",
+  "scope_extensions": [
+    {
+      "origin": "https://amandeep13131313.github.io"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "prefer_related_applications": false,
+  "related_applications": []
 }
